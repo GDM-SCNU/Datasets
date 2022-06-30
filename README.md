@@ -76,5 +76,7 @@ References:
 
 [1] Oleksandr S, Günnemann S (2019) Overlapping Community Detection with Graph Neural Networks. preprint arXiv
 
+#### 说明
 
-
+1. 所有数据集均带有节点自环
+2. 数据集中，除标签外，其余矩阵仅有1或0标志
