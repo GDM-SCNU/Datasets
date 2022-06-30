@@ -6,8 +6,8 @@
 
 ```python
 """
-	数据集格式
-	'name' # 数据集名称 
+数据集格式
+    'name' # 数据集名称 
     'topo' # 拓扑 :csr_matrix: int32
     'attr' # 属性 :csr_matrix: float64
     'label'# 标签 :ndarray：int64
