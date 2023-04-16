@@ -6,15 +6,12 @@
 
 ```python
 """
-数据集格式
-    'name' # 数据集名称 
-    'topo' # 拓扑 :csr_matrix: int32
-    'attr' # 属性 :csr_matrix: float64
-    'label'# 标签 :ndarray：int64
-"""
 import pickle as pkl
-with open("cora.pkl",'rb') as f:
-    data = pkl.load(f) # data['...']
+with open(dataset_addr, "rb")as f:
+    dataset = pkl.load(f)
+    adj = dataset['adj'] # 读取非自环稀疏矩阵
+    feat = dataset['feat'] # 读取稀疏特征矩阵
+    label = dataset['label'] # 读取标签(ndarray)
 ```
 
 #### 转为DGL
