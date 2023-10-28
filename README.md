@@ -9,46 +9,36 @@
 import pickle as pkl
 with open(dataset_addr, "rb")as f:
     dataset = pkl.load(f)
-    adj = dataset['adj'] # 读取非自环稀疏矩阵
-    feat = dataset['feat'] # 读取稀疏特征矩阵
-    label = dataset['label'] # 读取标签(ndarray)
 ```
 
-#### 转为DGL
-
-```python
-import dgl
-graph = dgl.from_scipy(data['topo']) # 数据集中自带自环
-```
-
-#### csr_matrix转格式
-
-```python
-# 转ndarray
-data['topo'].toarray()
-# 转矩阵
-data['topo'].todense()
-```
-
-
+#### complext networks
+- Blogcatalog
+- Citeseer
+- Cora
+- Cornell
+- Flickr
+- Pubmed
+- Texas
+- UAI2010
+- Washington
+- Wisconsin
 
 #### topology networks
+- Email
+- Wiki
 
-加载数据集
+#### multiplex networks
+- ACM
+- Amazon
+- DBLP
+- IMDB
 
-```python
-"""
-	数据集格式
-	'name' # 数据集名称 
-    'topo' # 拓扑 :csr_matrix: int32
-    'label'# 标签 :ndarray：int64
-"""
-import pickle as pkl
-with open("cora.pkl",'rb') as f:
-    data = pkl.load(f) # data['...']
-```
-
-
+#### dynamic networks
+- Cellphone
+- DBLP
+- Dynamic_cora
+- highSchool
+- Java
 
 #### overlapping complex networks
 
